@@ -565,7 +565,7 @@ body {
 
 .con-animate-avatar {
     width: 250px;
-    height: 250px;
+    height: 346px;
 
 }
 
@@ -635,6 +635,8 @@ body {
 .con-form textarea {
     max-width: 400px;
     width: 400px;
+    min-width: 400px;
+    min-height: 100px;
     padding: 10px;
     border: 1px solid white;
     background-color: transparent;
@@ -921,6 +923,8 @@ footer {
 
     .con-form textarea {
         width: 230px;
+        min-width: 230px;
+        max-width: 230px;
     }
 }
 
