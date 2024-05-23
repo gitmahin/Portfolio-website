@@ -1,4 +1,4 @@
-function autoType(querySelector, word){
+function autoType(querySelector, word) {
     new Typed(querySelector, {
         strings: [word],
         typeSpeed: 30,
@@ -21,7 +21,7 @@ let typeMyTitle = new Typed(".type-my-title", {
     loop: true
 })
 
-function elementAnimate(queryname, class1AR, class2AR){
+function elementAnimate(queryname, class1AR, class2AR) {
     const observer = new IntersectionObserver(e => {
         e.forEach((item) => {
             if (item.isIntersecting) {
@@ -33,13 +33,13 @@ function elementAnimate(queryname, class1AR, class2AR){
             }
         })
     })
-    
-    
+
+
     const hiddenElements = document.querySelectorAll(queryname)
     hiddenElements.forEach(element => {
         observer.observe(element)
     })
-    
+
 }
 
 elementAnimate(".hidden", "visible", "animate")
@@ -47,27 +47,27 @@ elementAnimate(".animateCards", "animatedCards")
 elementAnimate(".leftAni", "leftAnimated")
 
 let menuSlider = document.querySelector('.active-menu-slider')
-        let menuList = document.querySelectorAll(".header-menu ul a")
-        let indexValue = 0
-        let leftPosition = 0
+let menuList = document.querySelectorAll(".header-menu ul a")
+let indexValue = 0
+let leftPosition = 0
 
-        menuList.forEach((element, index) => {
-            menuSlider.style.width = menuList[0].clientWidth + "px"
-            menuSlider.style.left = leftPosition + "px"
-            element.addEventListener("click", () => {
-                menuSlider.style.width = element.clientWidth + "px"
-                indexValue = index
-                get_left_p_value()
-                menuSlider.style.left = leftPosition + "px"
-                leftPosition = 0
-            })
-        })
+menuList.forEach((element, index) => {
+    menuSlider.style.width = menuList[0].clientWidth + "px"
+    menuSlider.style.left = leftPosition + "px"
+    element.addEventListener("click", () => {
+        menuSlider.style.width = element.clientWidth + "px"
+        indexValue = index
+        get_left_p_value()
+        menuSlider.style.left = leftPosition + "px"
+        leftPosition = 0
+    })
+})
 
-        function get_left_p_value() {
-            for (let i = 0; i < indexValue; i++) {
-                const element = menuList[i];
-                leftPosition += element.clientWidth
-            }
-        }
+function get_left_p_value() {
+    for (let i = 0; i < indexValue; i++) {
+        const element = menuList[i];
+        leftPosition += element.clientWidth
+    }
+}
 
 
