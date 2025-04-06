@@ -70,4 +70,7 @@ function get_left_p_value() {
     }
 }
 
-
+const button = document.querySelector(".log-btn")
+button.addEventListener("click", () => {
+    window.alert("Log in Clicked")
+})
