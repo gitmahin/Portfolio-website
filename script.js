@@ -7,8 +7,6 @@ function autoType(querySelector, word) {
     })
 }
 
-
-
 autoType(".type-java", "Java")
 autoType(".type-js", "Javascript")
 autoType(".type-py", "Python")
