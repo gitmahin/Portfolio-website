@@ -260,11 +260,20 @@ body {
     transform: translateY(-3px);
 }
 
-.hero-social-icons {
-    display: flex;
-    width: fit-content;
-    gap: 10px;
-    margin-top: 60px;
+.fa-brands{
+    color: #05e377;    padding:23px 15px;
+    transition: 0.3s ease;
+    border-radius: 50%;
+
+}
+
+
+.fa-brands:hover{
+  color: white;
+  background-color: #05e377;
+  transform: scale(1.1);
+  
+
 }
 
 .hero-social-icons img {
